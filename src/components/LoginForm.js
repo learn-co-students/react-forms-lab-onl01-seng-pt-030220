@@ -31,13 +31,13 @@ handleChangePassword=(event)=>{
 }
 handleSubmit=(event)=>{
   event.preventDefault()
- // let formData={username: this.state.username,password: this.state.password}
   const { username, password} =this.state
-  //let dataArray =this.state.submittedData.concat(formData)
-  //this.setState({
+  let formData={username: this.state.username,password: this.state.password}
+  let dataArray =this.state.submittedData.concat(formData)
+  this.setState({
 
-   // submittedData: dataArray
- // })
+    submittedData: dataArray
+  })
  if(username && password){
    this.props.handleLogin({username,password})
  }
@@ -47,7 +47,7 @@ handleSubmit=(event)=>{
 listOfSubmissions =()=>{
   return this.state.submittedData.map(data=>{
 
-    return <div><span>{this.props.login(data.username,data.password)}</span><span>{this.password}</span></div>
+    return <div><span>{data.username}</span><span>{data.password}</span></div>
   })
 }
   render() {
