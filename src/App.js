@@ -13,7 +13,7 @@ class App extends Component {
       <div>
 
         <h1>
-          <pre>LoginForm</pre>
+          <pre>LoginForm</pre> 
         </h1>
         <LoginForm handleLogin={this.login} />
 
